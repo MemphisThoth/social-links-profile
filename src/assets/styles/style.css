@@ -1,2 +1,146 @@
-/* Stylesheet for Social Links Profile */
+/* Stylesheet for Social Links Profile
+============================ */
 
+/* custom properties */
+
+:root {
+    --color-green: hsl(75 94% 57%);
+    --color-white: hsl(0 0% 100%);
+    --color-grey-700: hsl(0 0% 20%);
+    --color-grey-800: hsl(0 0% 12%);
+    --color-grey-900: hsl(0 0% 8%);
+}
+
+/* reset styles */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base styles */
+
+body {
+    background-color: var(--color-grey-900);
+    color: var(--color-white);
+}
+
+/* color styles */
+
+.green {
+    color: var(--color-green);
+}
+
+/* typography styles */
+
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter-VariableFont_slnt\,wght.ttf));
+}
+
+body {
+    font-family: Inter;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+li a {
+    font-weight: 600;
+}
+
+p {
+    font-size: 14px;
+    text-align: center;
+}
+
+/* layout styles */
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: var(--color-grey-800);
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* link styles */
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    color: var(--color-white);
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--color-grey-700);
+    border-radius: 8px;
+    padding: 10px; 
+    margin-top: 15px;
+    transition: all 300ms ease;
+}
+
+.btn:hover {
+    color: var(--color-grey-900);
+    background-color: var(--color-green);
+}
+
+/* avatar styles */
+
+.avatar-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    margin-bottom: 30px;
+}
+
+.profile-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* component styles */
+
+.location {
+    font-size: 12px;
+    margin-bottom: 35px;
+}
+
+.quote {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+/* responsive styles */
+
+@media ( width > 376px) {
+    .container {
+        max-width: 385px;
+        padding: 40px;
+    }
+    .btn {
+        margin-top: 20px;
+    }
+}
